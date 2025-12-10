@@ -32,19 +32,24 @@
   margin-bottom: -60px; 
 }
 
-/* ===== Image ===== */
+
 .steps-image-wrapper {
-  display: flex;
-  justify-content: flex-end;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  margin-top: -40px;
 }
 
+
 .steps-image {
-    width: 100%;
-    max-width: 1184px;
-    margin-top: 36px;
-    
+  width: 90%;
+    max-width: 1000px;
+    object-fit: contain;
+    margin-left: 0px;
+    margin-right: 0;      
 }
+
 
 /* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 768px) {
@@ -66,8 +71,9 @@
     justify-content: center;
   }
 
-  .steps-image {
-    max-width: 353px;
-    margin-top: 15px;
+   .steps-image {
+    width: 95%;
+    margin-left: 0;
+    margin-top: 20px;
   }
 }
