@@ -1,0 +1,73 @@
+/* ===== Section Layout ===== */
+.steps-section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.steps-container {
+  max-width: 1184px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+/* ===== Typography ===== */
+.steps-title {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 32.18px;
+  line-height: 1.2;
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+.steps-subtitle {
+  font-family: "Inter", sans-serif;
+  font-size: 28.97px;
+  font-weight: 500;
+  color: #5C5C5C;
+  text-align: left;
+  margin-bottom: -60px; 
+}
+
+/* ===== Image ===== */
+.steps-image-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.steps-image {
+    width: 100%;
+    max-width: 1184px;
+    margin-top: 36px;
+    
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  .steps-title {
+    font-size: 13.41px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .steps-subtitle {
+    font-size: 10px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: -15px;
+  }
+
+  .steps-image-wrapper {
+    justify-content: center;
+  }
+
+  .steps-image {
+    max-width: 353px;
+    margin-top: 15px;
+  }
+}

@@ -1,0 +1,9 @@
+.category-card {
+  background: white;
+}
+
+.selected-card {
+  background: #ffffff;
+  border: 1px solid #d4d4d4;
+  transform: translateY(-2px);
+}

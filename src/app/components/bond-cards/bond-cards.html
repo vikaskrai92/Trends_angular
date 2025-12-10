@@ -1,0 +1,65 @@
+<div
+  class="relative max-w-[520px] mx-auto h-[300px] rounded-2xl p-6 pt-12 bg-gradient-custom shadow-md hover:shadow-xl transition-all border border-[#E5ECF6] overflow-visible flex flex-col justify-between">
+
+  <!-- Logo Badge -->
+  <div class="relative -top-3 left-0 h-40 rounded-xl">
+     <div class="brand-badge-wrapper">
+    <div class="brand-badge">
+      <img [src]="logo" alt="logo" />
+    </div>
+  </div>
+  </div>
+<!-- Sell Anytime Pill -->
+  <div class="absolute -top-2 right-5">
+    <span class="sellanytime font-inter border border-green-200 text-green-700 text-xs  px-4 py-1.5 rounded-half shadow-sm">
+      Sell Anytime
+    </span>
+  </div>
+
+  <!-- Title & Description -->
+  <div>
+    <h2 class="text-xl font-semibold text-gray-900">{{ name }}</h2>
+    <p class="text-sm text-gray-600 mt-1">{{ description }}</p>
+
+    
+
+    <!-- Stats -->
+    <div class="w-full flex flex-col justify-between items-center space-y-1 pt-5 font-inter text-sm">
+
+            <!-- Top Labels Row -->
+            <div class="w-full flex justify-between px-6 whitespace-nowrap">
+                <span class="text-gray-500 testmin">Min. Investment</span>
+                <span class="text-gray-500">Tenure</span>
+                <span class="text-gray-500">Return (YTM)</span>
+            </div>
+
+            <!-- Bottom Values Row -->
+            <div class="w-full flex justify-between items-center px-2 my-2 whitespace-nowrap text-base font-semibold">
+                
+                <span>₹9,944</span>
+
+                <div class="flex-1 flex justify-center">
+                <div class="w-20 h-[1px] bg-[#2C7704] rounded"></div>
+                </div>
+
+                <span>22 Months</span>
+
+                <div class="flex-1 flex justify-center">
+                <div class="w-20 h-[1px] bg-[#2C7704] rounded"></div>
+                </div>
+
+                <span class="text-[#2C7704]">11.0%</span>
+
+            </div>
+
+    </div>
+
+</div>
+<hr class="border-t border-gray-300 my-5">
+  <!-- CTA Button -->
+  <div class="flex justify-between items-center mt-6 cursor-pointer hover:text-green-700">
+    <span class="text-green-600 font-semibold text-lg">Invest Now</span>
+    <span class="text-green-600 text-2xl font-bold">›</span>
+  </div>
+
+</div>

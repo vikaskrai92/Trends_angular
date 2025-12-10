@@ -1,0 +1,67 @@
+/* Card Gradient Background - Light blue fading to white */
+.bg-gradient-custom {
+  background: linear-gradient(180deg, #D8E4FF 0%, #FFFFFF 100%);
+}
+
+.brand-badge-wrapper {
+  position: absolute;
+  top: -45px;
+  left: 13%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.brand-badge {
+  position: relative;
+  background: #f9f9f9;
+  padding: 5px 60px;
+  border-radius: 3.2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  clip-path: polygon(8% 0%, 92% 0%, 100% 100%, 0% 100%);
+  box-shadow: 0 0px 10px rgba(47, 47, 47, 0.25); 
+  width: 190px;
+}
+
+/* Create border that follows clip path */
+.brand-badge::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid #EFE6E6;
+  border-radius: 3.2px;
+  clip-path: polygon(8% 0%, 92% 0%, 100% 100%, 0% 100%);
+  pointer-events: none; /* allow clicks through element */
+}
+
+.testmin{
+  margin-left:-14px
+}
+
+.brand-badge img {
+  height: 28px;
+}
+
+
+
+.sellanytime{
+  background-color: #E8F7ED;
+  border-radius: 2px;
+  font-style: italic;
+  font-weight: 600;
+  }
+:host {
+  display: block;
+}
+
+@media (max-width: 768px) {
+
+.brand-badge-wrapper {
+  position: absolute;
+  top: -45px;
+  left: 18%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+}

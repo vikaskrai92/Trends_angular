@@ -1,0 +1,119 @@
+<section class="bg-white px-6 md:px-10 lg:px-20 py-12 font-inter">
+
+  <div class="max-w-[1300px] mx-auto flex items-center justify-between gap-6">
+
+    <!-- LEFT CONTENT -->
+    <div class="space-y-4">
+      <h1 class="text-[26px] md:text-[52px] font-bold leading-tight">
+        Smart Bonds.<br />Steady Returns.
+      </h1>
+
+      <p class="text-gray-600 text-[13px] md:text-base max-w-sm">
+        Build long-term wealth with stable, low-risk bond investments.
+      </p>
+
+      <button
+        class="bg-[#b5ffcc] text-black px-6 py-3 rounded-lg font-semibold inline-flex items-center gap-2">
+        Explore Bonds →
+      </button>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <img
+      src="/assets/rupee-greens.png"
+      alt="rupee"
+      class="rupee-img w-[130px] md:w-[230px] lg:w-[200px] -mt-6"
+    />
+
+  </div>
+
+  <!-- FULL-WIDTH MOBILE DIVIDER - ALWAYS CENTERED -->
+  <div class="lg:hidden flex justify-center mt-6">
+    <div
+      class="w-[200px] h-[1px] rounded-full bg-[linear-gradient(90deg,#626262_0%,#C4C3C3_50%,#626262_100%)]">
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+<!-- CATEGORY FILTER SECTION -->
+<section class="px-6 md:px-10 lg:px-20 py-4 bg-white">
+  <div class="max-w-[1300px] mx-auto">
+    <h3 class="text-sm font-semibold text-gray-500 mb-4 uppercase">
+      SELECT A CATEGORY
+    </h3>
+    
+    <!-- Category Filters Component -->
+    <app-category-filter></app-category-filter>
+  </div>
+</section>
+
+<!-- BOND CARDS SECTION -->
+<section class="px-6 md:px-10 lg:px-20 py-10 bg-white">
+  <div class="max-w-[1300px] mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+  <app-bond-card
+    logo="assets/Navi_New_Logo.png"
+    name="Navi Finserv"
+    description="A rated bond of a 12,600+ Cr AUM, Digital NBFC"
+    minInvestment="₹9,944"
+    tenure="22 Months"
+    returnYTM="11.0%">
+  </app-bond-card>
+
+  <app-bond-card
+    logo="assets/ugrow.webp"
+    name="Ugro"
+    description="A Data-tech, MSME lending NBFC Managing 9,000+ Cr AUM"
+    minInvestment="₹1,013"
+    tenure="17 Months"
+    returnYTM="10.0%">
+  </app-bond-card>
+
+  <app-bond-card
+    logo="assets/kossamatam.png"
+    name="Kosamattam Finance Limited"
+    description="Gold Loan Focused NBFC with High Promoter Skin Managing an AUM of INR 5.8k Cr"
+    minInvestment="₹976"
+    tenure="35 Months"
+    returnYTM="11.0%">
+  </app-bond-card>
+
+  <app-bond-card
+    logo="assets/VCPL LOGO-01.png"
+    name="Vivriti Capital Limited"
+    description="MSME Focused NBFC, Managing 8,200+ Cr AUM"
+    minInvestment="₹10,248"
+    tenure="31 Months"
+    returnYTM="10.0%">
+  </app-bond-card>
+
+  <app-bond-card
+    logo="assets/Navi_New_Logo.png"
+    name="Navi Finserv"
+    description="A rated bond of a 12,600+ Cr AUM, Digital NBFC"
+    minInvestment="₹9,944"
+    tenure="22 Months"
+    returnYTM="11.0%">
+  </app-bond-card>
+
+  <app-bond-card
+    logo="assets/ugrow.webp"
+    name="Ugro"
+    description="A Data-tech, MSME lending NBFC Managing 9,000+ Cr AUM"
+    minInvestment="₹1,013"
+    tenure="17 Months"
+    returnYTM="10.0%">
+  </app-bond-card>
+      </div>
+    </div>
+  </section>
+
+  <app-steps-section></app-steps-section>
+
+  <app-faq-section></app-faq-section>

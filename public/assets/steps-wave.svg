@@ -1,0 +1,30 @@
+<svg viewBox="0 0 1000 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <!-- Define curves for each step transition -->
+  
+  <!-- Step 1 to 2: Blue to Green curve -->
+  <path d="M 80 280 Q 120 220, 160 200 Q 200 180, 240 160" 
+        fill="none" stroke="#4B8FF8" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Step 2 to 3: Green to Yellow curve -->
+  <path d="M 240 160 Q 300 140, 360 130 Q 420 120, 480 120" 
+        fill="none" stroke="#4CC38A" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Step 3 to 4: Yellow to Cyan curve -->
+  <path d="M 480 120 Q 550 120, 620 140 Q 680 160, 720 200" 
+        fill="none" stroke="#9CD44A" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Step 4 to 5: Cyan to Yellow-gold curve -->
+  <path d="M 720 200 Q 760 240, 800 280 Q 840 310, 880 330" 
+        fill="none" stroke="#0CA9E0" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Step 5: Yellow-gold continuation -->
+  <path d="M 880 330 Q 920 350, 960 360" 
+        fill="none" stroke="#E4C62B" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Circular nodes at each step -->
+  <circle cx="80" cy="280" r="12" fill="#4B8FF8" stroke="white" stroke-width="3"/>
+  <circle cx="240" cy="160" r="12" fill="#4CC38A" stroke="white" stroke-width="3"/>
+  <circle cx="480" cy="120" r="12" fill="#9CD44A" stroke="white" stroke-width="3"/>
+  <circle cx="720" cy="200" r="12" fill="#0CA9E0" stroke="white" stroke-width="3"/>
+  <circle cx="880" cy="330" r="12" fill="#E4C62B" stroke="white" stroke-width="3"/>
+</svg>

@@ -1,0 +1,26 @@
+<section class="w-full py-5">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+    <div
+      *ngFor="let item of categories"
+      (click)="selectCategory(item.id)"
+      [ngClass]="{
+        'selected-card shadow-md border border-gray-200': selected === item.id,
+        'border border-transparent': selected !== item.id
+      }"
+      class="category-card cursor-pointer p-6 rounded-xl flex flex-col items-center justify-center text-center transition-all duration-200 hover:shadow-xl"
+    >
+      <img [src]="item.icon" class="w-10 h-10 mb-3" alt="icon" />
+      <p class="text-gray-700 font-medium">{{ item.label }}</p>
+    </div>
+  </div>
+
+  <!-- VIEW ALL BUTTON (right aligned) -->
+  <div class="flex justify-end mt-6">
+    <button
+      (click)="viewAll()"
+      class="text-gray-600 underline underline-offset-4 font-medium hover:text-black transition">
+      View All
+    </button>
+  </div>
+
+</section>

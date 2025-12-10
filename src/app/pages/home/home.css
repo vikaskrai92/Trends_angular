@@ -1,0 +1,9 @@
+.rupee-img {
+  margin-top: -20px;
+}
+
+@media (max-width: 768px) {
+  .rupee-img {
+    margin-top: -10px;
+  }
+}
