@@ -1,69 +1,84 @@
 <div
-  class="relative max-w-[520px] mx-auto h-[300px] rounded-2xl p-6 pt-12 bg-gradient-custom shadow-md hover:shadow-xl transition-all border border-[#E5ECF6] overflow-visible flex flex-col justify-between">
+  class="relative w-full max-w-[520px] mx-auto rounded-2xl p-6 pt-14 
+         bg-gradient-custom shadow-md hover:shadow-xl transition-all 
+         border border-[#E5ECF6] overflow-visible flex flex-col">
 
-  <!-- Logo Badge -->
-  <div class="relative -top-3 left-0 h-40 rounded-xl">
-     <div class="brand-badge-wrapper">
-    <div class="brand-badge">
-      <img [src]="logo" alt="logo" />
-    </div>
-  </div>
-  </div>
-<!-- Sell Anytime Pill -->
-  <div class="absolute -top-2 right-5">
-    <span class="sellanytime font-inter border border-green-200 text-green-700 text-xs  px-4 py-1.5 rounded-half shadow-sm">
+  <!-- Logo Badge  -->
+            <div class="brand-badge-wrapper absolute -top-10 left-6 z-20">
+            <div class="brand-badge">
+                <img [src]="logo" alt="logo" />
+            </div>
+            </div>
+
+  <!-- Sell Anytime -->
+  <div class="absolute -top-4 right-4">
+    <span
+      class="sellanytime border text-green-700 text-[10px] sm:text-xs 
+             px-3 sm:px-4 py-1 rounded shadow-sm">
       Sell Anytime
     </span>
   </div>
 
-  <!-- Title & Description -->
-  <div>
-    <h2 class="text-xl font-semibold text-gray-900">{{ name }}</h2>
-    <p class="text-sm text-gray-600 mt-1">{{ description }}</p>
+  <!-- Title + Description -->
+  <div class="mt-4">
+    <h2 class="text-lg sm:text-xl font-semibold text-gray-900 leading-tight">
+      {{ name }}
+    </h2>
 
-    
+    <p
+      class="text-gray-600 text-xs sm:text-sm mt-1 leading-snug 
+             max-w-[90%] sm:max-w-full">
+      {{ description }}
+    </p>
+  </div>
 
-    <!-- Stats -->
-    <div class="w-full flex flex-col justify-between items-center space-y-1 pt-5 font-inter text-sm">
+  <!-- Stats Section -->
+  <div class="w-full flex flex-col items-center pt-4 sm:pt-5 text-sm">
 
-            <!-- Top Labels Row -->
-            <div class="w-full flex justify-between px-6 whitespace-nowrap">
-                <span class="text-gray-500 testmin">Min. Investment</span>
-                <span class="text-gray-500">Tenure</span>
-                <span class="text-gray-500">Return (YTM)</span>
-            </div>
-
-            <!-- Bottom Values Row -->
-            <div class="w-full flex justify-between items-center px-2 my-2 whitespace-nowrap text-base font-semibold">
-                
-                <span>₹9,944</span>
-
-                <!-- Left Line -->
-                <div class="flex-1 flex justify-center">
-                <div class="h-[1px] rounded bg-[#2C7704] w-[40px] sm:w-[90px]"></div>
-                </div>
-
-
-                <span>22 Months</span>
-
-               <!-- Left Line -->
-                <div class="flex-1 flex justify-center">
-                <div class="h-[1px] rounded bg-[#2C7704] w-[40px] sm:w-[90px]"></div>
-                </div>
-
-
-                <span class="text-[#2C7704]">11.0%</span>
-
-            </div>
-
+    <!-- Top labels -->
+    <div
+      class="w-full flex justify-between px-2 sm:px-6 whitespace-nowrap text-[10px] sm:text-xs">
+      <span class="text-gray-500">Min. Investment</span>
+      <span class="text-gray-500">Tenure</span>
+      <span class="text-gray-500">Return (YTM)</span>
     </div>
 
-</div>
-<hr class="border-t border-gray-300 my-5">
-  <!-- CTA Button -->
-  <div class="flex justify-between items-center mt-6 cursor-pointer hover:text-green-700">
-    <span class="text-green-600 font-semibold text-lg">Invest Now</span>
-    <span class="text-green-600 text-2xl font-bold">›</span>
+    <!-- Bottom Values -->
+    <div
+      class="w-full flex justify-between items-center 
+             px-1 sm:px-2 my-2 whitespace-nowrap 
+             text-sm sm:text-base font-semibold">
+
+      <!-- Min Investment -->
+      <span>{{ minInvestment }}</span>
+
+      <!-- Line 1 -->
+      <div class="flex-1 flex justify-center">
+        <div class="h-[1px] bg-[#2C7704] w-[25px] sm:w-[80px] md:w-[50px]"></div>
+      </div>
+
+      <!-- Tenure -->
+      <span>{{ tenure }}</span>
+
+      <!-- Line 2 -->
+      <div class="flex-1 flex justify-center">
+        <div class="h-[1px] bg-[#2C7704] w-[25px] sm:w-[80px] md:w-[50px]"></div>
+      </div>
+
+      <!-- Return -->
+      <span class="text-[#2C7704]">{{ returnYTM }}</span>
+    </div>
+  </div>
+
+  <!-- Divider -->
+  <hr class="border-t border-gray-300 my-3 sm:my-5" />
+
+  <!-- CTA -->
+  <div
+    class="flex justify-between items-center cursor-pointer 
+           text-green-600 hover:text-green-700">
+    <span class="font-semibold text-base sm:text-lg">Invest Now</span>
+    <span class="text-xl sm:text-2xl font-bold">›</span>
   </div>
 
 </div>

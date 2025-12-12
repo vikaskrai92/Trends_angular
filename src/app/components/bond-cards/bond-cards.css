@@ -4,11 +4,8 @@
 }
 
 .brand-badge-wrapper {
-  position: absolute;
-  top: -45px;
-  left: 13%;
-  transform: translateX(-50%);
-  z-index: 10;
+      top: -16px;
+    left: -14px;
 }
 
 .brand-badge {
@@ -57,11 +54,9 @@
 
 @media (max-width: 768px) {
 
-.brand-badge-wrapper {
-  position: absolute;
-  top: -45px;
-  left: 18%;
-  transform: translateX(-50%);
-  z-index: 10;
+  .brand-badge-wrapper {
+    left: -14px;
+    top: -5%; 
+  }
 }
-}
+

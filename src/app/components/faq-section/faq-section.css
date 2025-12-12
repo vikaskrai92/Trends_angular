@@ -1,3 +1,6 @@
 :host {
   display: block;
 }
+.faq-answer-wrapper {
+  max-height: 0;
+}

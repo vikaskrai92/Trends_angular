@@ -8,48 +8,79 @@ interface FaqItem {
 
 @Component({
   selector: 'app-faq-section',
+  standalone: true,
   imports: [CommonModule],
   template: `
-  <section class="w-full bg-gradient-to-b from-[#2B2B2B] to-black text-white py-20 px-6 md:px-20">
+    <section class="w-full bg-gradient-to-b from-[#1B1B1F] via-[#0F1013] to-[#050607]
+                    text-white py-20 px-6 md:px-10 lg:px-20">
 
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-5xl font-bold text-[#686E76]">Invest in bonds with</h2>
-      <h3 class="text-3xl md:text-5xl font-bold mt-2">9-12% Fixed Returns</h3>
-      <!-- decorative underline (as requested) -->
-      <div class="w-60 h-1 bg-[linear-gradient(90deg,#626262_0%,#C4C3C3_50%,#626262_100%)] rounded-full mx-auto mt-3"></div>
+      <div class="max-w-4xl mx-auto">
 
-      <p class="text-gray-400 text-sm mt-3">
-        SEBI Registered | Start with just ₹1,000 today | Sell Anytime
-      </p>
-    </div>
-
-    <div class="max-w-3xl mx-auto">
-      <h3 class="text-xl font-semibold mb-6">Frequently Asked Questions</h3>
-
-      <div *ngFor="let item of faqs; let i=index" class="mb-4">
-        <div
-          (click)="toggle(i)"
-          class="flex justify-between items-center bg-[#2b2b2b] hover:bg-[#333] transition-all
-                 px-6 py-4 rounded-xl cursor-pointer"
-        >
-          <p class="font-medium">{{ item.question }}</p>
-          <span class="text-2xl">{{ openedIndex === i ? '−' : '+' }}</span>
+        <!-- Heading -->
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-semibold">
+            Invest in bonds with <br />
+            <span class="text-4xl md:text-5xl font-bold">9–12% Fixed Returns</span>
+          </h2>
+          <!-- Decorative Underline -->
+        <div class="w-50 h-1 bg-[linear-gradient(90deg,#626262_0%,#C4C3C3_50%,#626262_100%)] 
+                    rounded-full mx-auto mt-3">
+        </div>
+          <p class="mt-4 text-xs md:text-sm tracking-wide text-gray-400 uppercase">
+            SEBI Registered &nbsp; | &nbsp; Start with just ₹1,000 today &nbsp; | &nbsp; Sell Anytime
+          </p>
         </div>
 
-        <div
-          *ngIf="openedIndex === i"
-          class="bg-[#2b2b2b] px-6 py-4 rounded-xl border-t border-gray-700 text-gray-300 text-sm"
-        >
-          {{ item.answer }}
+        <!-- FAQ Title -->
+        <h3 class="text-sm md:text-base font-semibold text-gray-200 mb-4">
+          Frequently Asked Questions
+        </h3>
+
+        <!-- FAQ LIST -->
+        <div class="space-y-3">
+          <div *ngFor="let item of faqs; let i = index">
+
+            <!-- Single FAQ Box -->
+            <div class="bg-[#25262C]/90 hover:bg-[#2B2C33] 
+                        border border-[#33343A]
+                        rounded-2xl overflow-hidden transition">
+
+              <!-- Question Row -->
+              <button
+                class="w-full flex justify-between items-center 
+                       px-5 md:px-6 py-4 md:py-5 text-left"
+                (click)="toggle(i)"
+              >
+                <span class="text-sm md:text-base font-medium">
+                  {{ item.question }}
+                </span>
+
+                <span class="w-6 h-6 flex items-center justify-center 
+                             rounded-full bg-[#33343A] text-xs md:text-sm">
+                  {{ openIndex === i ? '−' : '+' }}
+                </span>
+              </button>
+
+              <!-- Answer (inside same rounded box) -->
+              <div
+                *ngIf="openIndex === i"
+                class="px-5 md:px-6 pb-5 md:pb-6 text-xs md:text-sm text-gray-300 
+                       border-t border-[#33343A]"
+              >
+                {{ item.answer }}
+              </div>
+
+            </div>
+          </div>
         </div>
+
       </div>
-    </div>
-
-  </section>
+    </section>
   `,
   styleUrls: ['./faq-section.css']
 })
 export class FaqSection {
+
   faqs: FaqItem[] = [
     {
       question: 'Can I use Spline for free?',
@@ -93,9 +124,9 @@ export class FaqSection {
     }
   ];
 
-  openedIndex: number | null = null;
+  openIndex: number | null = null;
 
   toggle(index: number) {
-    this.openedIndex = this.openedIndex === index ? null : index;
+    this.openIndex = this.openIndex === index ? null : index;
   }
 }
